@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .content{
+            display: grid;
+            justify-items: center;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            height: 100vh;
+        }
+        .content > a {
+            text-align: center;
+            padding: 70% 0px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+            border: 1px;
+        }
+        a:hover{
+            border-style: solid;
+            border-color: white;
+        }
+        .laptop{
+            background-color: rgb(36, 36, 36);
+            width: 100%;
+            height: 100%;
+        }
+        .phone{
+            background-color: rgb(59, 59, 59);
+            width: 100%;
+            height: 100%;
+        }
+        .tablet{
+            background-color: rgb(110, 110, 110);
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align:center">
+        <div class="inside">
+            <h1>Websitenizin Cihazlardaki Uyumluluğunu Görün</h1>
+            <p>Alt kısımdan websitenizi test etmek istediğiniz platformu seçin,</p>
+            <p>URL girerek ya da Klasör yolunu girerek sitenizin responsive uyumluluğunu test edin !</p>
+        </div>
+    </header>
+    <div class="content">
+            <a class="laptop" href="./Laptop/index.html" target="_blank">Laptop</a>
+            <a class="phone" href="./Phone/index.html" target="_blank">Phone</a>
+            <a class="tablet" href="./Tablet/index.html" target="_blank">Tablet</a>
+    </div>
+</body>
+</html>

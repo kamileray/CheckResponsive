@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablet - 768x1024</title>
+<style>
+body {
+  background: #f1f1f1;
+}
+
+/* The device with borders */
+.tablet {
+  position: relative;
+  width: 768px;
+  height: 1024px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.tablet:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.tablet:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.tablet .content {
+  width: 768px;
+  height: 1024px;
+  background: white;
+  margin: -1px;
+}
+</style>
+<script>
+  function website(){
+  var url = prompt("Lütfen websitenizin tam adresini veya klasör yolunu giriniz", "https://kamileray.tk/");
+  if(url == "" || url == null){
+    website();
+  }
+  var frame = document.getElementById("myIframe").src = url;
+
+  if(frame == null){
+    alert("Sayfa yüklemesi başarısız oldu !");
+    location.reload();
+  }
+}
+  </script>
+</head>
+<body onload="website()">
+  
+  <!-- <form action="#" method="get">
+  <div class="inputtxt">
+    <input type="url" name="url" id="url">
+    <button type="submit">Yolla</button>
+  </div>
+</form> -->
+
+<div class="tablet">
+  <div class="content">
+    <iframe id="myIframe" style="width:100%;border:none;height:100%">
+  </div>
+</div>
+
+
+
+</body>
+</html>
